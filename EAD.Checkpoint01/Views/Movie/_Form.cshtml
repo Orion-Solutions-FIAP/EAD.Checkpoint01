@@ -1,0 +1,43 @@
+﻿@model Movie
+
+<div asp-validation-summary="ModelOnly"></div>
+
+<div class="form-group">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>  
+</div>
+
+<div class="form-group">
+    <label asp-for="Category"></label>
+    <select asp-items="@Html.GetEnumSelectList<Category>()"
+            asp-for="Category" class="form-control">
+        <option value="">Selecione</option>
+    </select>
+    <span asp-validation-for="Category" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="Synopsis"></label>
+    <textarea asp-for="Synopsis" class="form-control"></textarea>
+    <span asp-validation-for="Synopsis" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="ReleaseDate"></label>
+    <input asp-for="ReleaseDate" class="form-control" />
+    <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <label asp-for="Duration"></label>
+    <input asp-for="Duration" class="form-control" />
+    <span asp-validation-for="Duration" class="text-danger"></span>
+</div>
+
+<div class="form-group">
+    <div class="custom-control custom-switch">
+        <input asp-for="InTheaters" type="checkbox" class="custom-control-input">
+        <label class="custom-control-label" asp-for="InTheaters"></label>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Cadastro de Filme";
+}
+
+<h1>Cadastro de Filme</h1>
+
+<form asp-action="Create">
+    <partial name="_Form" />
+    <submit-button></submit-button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar <i class="bi bi-x-lg"></i></a>
+</form>
